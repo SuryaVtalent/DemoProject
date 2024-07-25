@@ -9,7 +9,8 @@ namespace WebAPIProject.Controllers
     [ApiController]
     public class EmpController : ControllerBase
     {
-
+        [HttpGet]
+        [Route("GetNames")]
         public IActionResult GetNames()
         {
             try
