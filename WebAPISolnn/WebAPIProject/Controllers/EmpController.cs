@@ -31,5 +31,26 @@ namespace WebAPIProject.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("GetNumbers")]
+        public IActionResult GetNumbers()
+        {
+        try
+        {
+        List<int> Numbers=new List<int>();
+        Numbers.Add(10);
+        Numbers.Add(101);
+        Numbers.Add(1001);
+        Numbers.Add(505);
+
+        return Ok(Numbers);
+        }
+        catch(Exception e)
+        {
+        return BadRequest(e.Message);
+        }
+        
+        }
+
     }
 }
